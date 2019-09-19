@@ -4,17 +4,35 @@ const resolve = dir => path.join(__dirname, dir);
 
 const config = {
     pluginOptions: {
-        i18n: {
-            localeDir: 'locales',
-            enableInSFC: true
-        },
-        moment: {
-            locales: ['ko', 'ja', 'zh-tw', 'zh-cn', 'de', 'en', 'es', 'fr', 'pt']
-        }
+      i18n: {
+        localeDir: 'locales',
+        enableInSFC: true
+      },
+      moment: {
+        locales: [
+          'ko',
+          'ja',
+          'zh-tw',
+          'zh-cn',
+          'de',
+          'en',
+          'es',
+          'fr',
+          'pt'
+        ]
+      },
+      prerenderSpa: {
+        registry: undefined,
+        renderRoutes: [
+          '/'
+        ],
+        useRenderEvent: true,
+        headless: true,
+        onlyProduction: true
+      }
     },
     devServer: {
         // http2: true,
-        https: true,
         // https: {
         //     key: fs.readFileSync('cert/star.onstove.com/onstove_private.key'),
         //     cert: fs.readFileSync('cert/star.onstove.com/onstove_private.crt'),

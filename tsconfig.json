@@ -1,21 +1,48 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "es5",
     "module": "esnext",
     "strict": true,
     "jsx": "preserve",
+    "strictNullChecks": false,
     "importHelpers": true,
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "strictPropertyInitialization": false,
     "sourceMap": true,
+    "allowJs": true,
     "baseUrl": ".",
     "types": [
-      "webpack-env",
-      "jest"
+      "jest",
+      "webpack-env"
     ],
     "paths": {
+      "@runTypeConfig": [
+        "src/config/run-type/*"
+      ],
+      "@coreRunTypeConfig": [
+        "node_modules/seed/src/config/run-type/*"
+      ],
+      "@platformConfig": [
+        "src/config/platform/*"
+      ],
+      "@corePlatformConfig": [
+        "node_modules/seed/src/config/platform/*"
+      ],
+      "@router/*": [
+        "src/router/pc/*",
+        "src/router/mobile/*"
+      ],
+      "@layouts/*": [
+        "src/layouts/pc/*",
+        "src/layouts/mobile/*"
+      ],
+      "@views/*": [
+        "src/views/pc/*",
+        "src/views/mobile/*"
+      ],
       "@/*": [
         "src/*"
       ]
@@ -32,9 +59,12 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "tests/**/*.ts",
-    "tests/**/*.tsx"
+    "tests/**/*.tsx",
+    "types/vue-global.d.ts"
   ],
   "exclude": [
+    "tmp",
+    "dist",
     "node_modules"
   ]
 }

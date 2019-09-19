@@ -2,15 +2,12 @@
 
 import {register} from 'register-service-worker';
 
-console.log('serviceWorker ::', process.env.NODE_ENV);
 if (process.env.NODE_ENV === 'production') {
-    console.log('ready.......', process.env.BASE_URL);
-
     register(`${process.env.BASE_URL}service-worker.js`, {
         ready() {
             console.log(
                 'App is being served from cache by a service worker.\n' +
-                'For more details, visit https://goo.gl/AFskqB',
+                'For more details, visit https://goo.gl/AFskqB'
             );
         },
         registered() {
@@ -30,6 +27,6 @@ if (process.env.NODE_ENV === 'production') {
         },
         error(error) {
             console.error('Error during service worker registration:', error);
-        },
+        }
     });
 }
