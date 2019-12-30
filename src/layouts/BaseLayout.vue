@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <menu></menu>
+        <Menu/>
         <router-view/>
     </div>
 </template>
@@ -8,7 +8,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import {Component} from 'vue-property-decorator';
-import Menu from '../components/Menu';
+import Menu from '@/components/Menu';
 
 @Component({
     components: {

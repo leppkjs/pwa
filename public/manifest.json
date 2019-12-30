@@ -3,14 +3,14 @@
   "short_name": "pwa",
   "icons": [
     {
-      "src": "./img/icons/android-chrome-192x192.png",
+      "src": "./img/img_4-3/img_01.jpg",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/jpg"
     },
     {
-      "src": "./img/icons/android-chrome-512x512.png",
+      "src": "./img/img_16-9/event_01.jpg",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/jpg"
     }
   ],
   "start_url": "./index.html",
